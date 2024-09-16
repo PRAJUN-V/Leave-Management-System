@@ -1,0 +1,36 @@
+# API for registration
+POST http://127.0.0.1:8000/api/accounts/register/
+Content-Type: application/json
+
+{
+    "password": "User@123", 
+    "email": "user1@gmail.com", 
+    "profile": {"role": "employee"}
+}
+
+###
+
+#  API to get token if we give correct credientials
+POST http://127.0.0.1:8000/api/accounts/token/
+Content-Type: application/json
+
+{
+    "email": "employee1@yopmail.com",
+    "password": "User@123"
+}
+
+###
+
+#  API to get new access token when I give refresh token
+POST http://127.0.0.1:8000/api/accounts/token/refresh/
+Content-Type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNjIxNzI1NSwiaWF0IjoxNzI2MTMwODU1LCJqdGkiOiIyMTkxYmZiY2I0NzQ0OTE0OWVkNDRmNTZlZjMwZTc1OCIsInVzZXJfaWQiOjcsImlkIjo3LCJyb2xlIjoiZW1wbG95ZWUiLCJpc19hY3RpdmUiOnRydWV9.YVSIPOqHrbzmfQmTFPdTKocDzXaOyJSY8uGaWODOtUk"
+}
+
+###
+
+GET http://127.0.0.1:8000/api/accounts/user-status/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2MTMxMjQyLCJpYXQiOjE3MjYxMzA4NTUsImp0aSI6IjJiMmFhMWViMzE3YTQ3NTE5YjEzMWE1NzczZTFkYTNkIiwidXNlcl9pZCI6NywiaWQiOjcsInJvbGUiOiJlbXBsb3llZSIsImlzX2FjdGl2ZSI6dHJ1ZX0.0ZLHa1fVCn2EJN0KIt9ySmbibQy-vl3xdu83KPgYd3g
+Content-Type: application/json

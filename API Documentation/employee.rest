@@ -1,0 +1,15 @@
+POST http://localhost:8000/api/employee/leave-request/25/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NDY2NjYwLCJpYXQiOjE3MjY0NjYzNjAsImp0aSI6ImFkM2M3MmE0ZTg1YzQ1NjlhZjczOGUzYjI4OTY3NWJmIiwidXNlcl9pZCI6MjUsImlkIjoyNSwicm9sZSI6ImVtcGxveWVlIiwiaXNfYWN0aXZlIjp0cnVlfQ.YfhAGqpifjh0EHxzpLw9nv4gj1Gd8EF6Jr7LXZNGmYY
+Content-Type: application/json
+
+{
+  "leave_type": "casual",
+  "leave_date": "2024-10-01",
+  "reason": "Vacation",
+  "request_date": "2024-09-16T12:00:00Z"
+}
+###
+
+GET http://localhost:8000/api/employee/leave_status/25/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI2NDY3MjQxLCJpYXQiOjE3MjY0NjY5NDEsImp0aSI6Ijg0ZGZjMjQzNDliNzQ5YzNhYzNjZTRhYWYwNGRmMmEzIiwidXNlcl9pZCI6MjUsImlkIjoyNSwicm9sZSI6ImVtcGxveWVlIiwiaXNfYWN0aXZlIjp0cnVlfQ.N6W79ZF0Lzjjxc5bkmtbuMWNFw7uvkD7cXyvsNV43xY
+Content-Type: application/json
